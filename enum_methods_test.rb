@@ -26,3 +26,6 @@ def multiply_els(arr)
 end
 
 puts multiply_els([2,4,5])
+
+proc = Proc.new { |a| a**3 }
+puts [2,4,5].my_map(proc).inspect

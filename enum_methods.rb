@@ -79,9 +79,12 @@ module Enumerable
     end
   end
 
-  def my_map
+  def my_map(my_proc = nil)
     m = []
-    if block_given?
+    if my_proc
+      self.my_each { |i| m << my_proc.call(i) }
+      m
+    elsif block_given?
       self.my_each { |i| m << yield(i) }
       m
     else
