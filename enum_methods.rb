@@ -42,5 +42,42 @@ module Enumerable
     end
   end
 
+  def my_all?
+    if block_given?
+      self.my_each { |i| return false unless yield(i) }
+      true
+    else
+      to_enum(:my_all?)
+    end
+  end
+
+  def my_any?
+    if block_given?
+      self.my_each { |i| return true if yield(i) }
+      false
+    else
+      to_enum(:my_any?)
+    end
+  end
+
+  def my_none?
+    if block_given?
+      self.my_each { |i| return false if yield(i) }
+      true
+    else
+      to_enum(:my_none?)
+    end
+  end
+
+  def my_count
+    if block_given?
+      count = 0
+      self.my_each { |i| count += 1 if yield(i) }
+      count
+    else
+      self.count
+    end
+  end
+
 
 end # MODULE

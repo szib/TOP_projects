@@ -11,3 +11,9 @@ puts arr.my_select { |x| x%2 == 0 }
 
 puts hsh.my_select { |k,v| v == "333" }
 puts arr.my_select
+
+puts [1,3,5,7].my_all? { |x| x%2 == 1 }
+puts [1,3,5,4,7].my_any? { |x| x%2 == 0 }
+puts [1,3,5,7].my_none? { |x| x%2 == 0 }
+puts [4,1,3,5,7].my_count { |x| x%2 == 0 }
+puts [4,1,3,5,7].my_count
