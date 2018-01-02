@@ -17,3 +17,5 @@ puts [1,3,5,4,7].my_any? { |x| x%2 == 0 }
 puts [1,3,5,7].my_none? { |x| x%2 == 0 }
 puts [4,1,3,5,7].my_count { |x| x%2 == 0 }
 puts [4,1,3,5,7].my_count
+
+puts [4,1,3,5,7].my_map { |x| x**2 }.inspect
