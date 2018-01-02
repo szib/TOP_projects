@@ -89,5 +89,19 @@ module Enumerable
     end
   end
 
+  def my_inject(acc = nil)
+    if block_given?
+      if acc.nil?
+        acc = self[0]
+      else
+        yield(acc, self[0])
+      end
+      self[1..self.length].my_each { |i| acc = yield(acc, i) }
+      acc
+    else
+      to_enum(:my_inject)
+    end
+  end
+
 
 end # MODULE

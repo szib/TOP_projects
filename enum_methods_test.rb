@@ -19,3 +19,10 @@ puts [4,1,3,5,7].my_count { |x| x%2 == 0 }
 puts [4,1,3,5,7].my_count
 
 puts [4,1,3,5,7].my_map { |x| x**2 }.inspect
+puts [4,1,3,5,7].my_inject { |acc,b| acc += b }
+
+def multiply_els(arr)
+  arr.my_inject { |memo, i| memo * i }
+end
+
+puts multiply_els([2,4,5])
