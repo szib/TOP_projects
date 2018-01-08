@@ -1,4 +1,4 @@
-require './quick_sort.rb'
+require './lib/quick_sort.rb'
 
 describe 'Quicksort' do
   before do

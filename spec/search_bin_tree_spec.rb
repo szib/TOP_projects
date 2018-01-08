@@ -1,4 +1,4 @@
-require './search_bin_tree.rb'
+require './lib/search_bin_tree.rb'
 
 describe 'Search binary tree' do
   before do

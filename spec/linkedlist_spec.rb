@@ -1,4 +1,4 @@
-require './linkedlist.rb'
+require './lib/linkedlist.rb'
 
 describe 'LinkedList' do
   before do
