@@ -19,32 +19,32 @@ describe 'Search binary tree' do
 
   context 'breath first search' do
     it 'should return an item' do
-      expect(BinTree.bfs(6, tree).value).to eq(6)
+      expect(BinTree.bfs(6, tree).value).to eql(6)
     end
 
     it 'should return nil if no success' do
-      expect(BinTree.bfs(111, tree)).to eq(nil)
+      expect(BinTree.bfs(111, tree)).to be_nil
     end
   end
 
   context 'deep first search' do
     context 'recursive way' do
       it 'should return an item' do
-        expect(BinTree.dfs_rec(6, tree).value).to eq(6)
+        expect(BinTree.dfs_rec(6, tree).value).to eql(6)
       end
 
       it 'should return nil if no success' do
-        expect(BinTree.dfs_rec(111, tree)).to eq(nil)
+        expect(BinTree.dfs_rec(111, tree)).to be_nil
       end
     end
 
     context 'non-recursive way' do
       it 'should return item' do
-        expect(BinTree.dfs(6, tree).value).to eq(6)
+        expect(BinTree.dfs(6, tree).value).to eql(6)
       end
 
       it 'should return nil if no success' do
-        expect(BinTree.dfs(111, tree)).to eq(nil)
+        expect(BinTree.dfs(111, tree)).to be_nil
       end
     end
   end
